@@ -1,0 +1,10 @@
+- 3x3 grid
+- Player 1 (x) goes first
+- Player 2 (o) goes second
+- repeat
+- after 9 clicks, display "draw"
+
+
+
+- display error if player clicks on a filled cell
+- how to test for winner
