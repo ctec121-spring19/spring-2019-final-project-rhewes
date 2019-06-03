@@ -3,8 +3,7 @@
 - Player 2 (o) goes second
 - repeat
 - after 9 clicks, display "draw"
-
-
+    - it can be assumed that after 9 clicks, there will be a draw
 
 - display error if player clicks on a filled cell
 - how to test for winner
