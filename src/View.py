@@ -25,7 +25,8 @@ class View:
         if pt.getX() <= 3 and pt.getY() <= 3:
             cellNum = int(getX) * 3 + int(getY)
         else:
-            cellNum = -1 
+            cellNum = -1
+        return cellNum
 
 def ViewTest():
     v = View()
