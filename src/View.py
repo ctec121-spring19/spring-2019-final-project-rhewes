@@ -22,9 +22,8 @@ class View:
     def getClick():
         pt = self.win.getMouse()
 
-        if pt.getX() <= 3 and
-           pt.getY() <= 3:
-           cellNum = int(getX) * 3 + int(getY)
+        if pt.getX() <= 3 and pt.getY() <= 3:
+            cellNum = int(getX) * 3 + int(getY)
         else:
             cellNum = -1 
 
