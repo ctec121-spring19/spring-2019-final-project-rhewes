@@ -51,5 +51,32 @@ def ControllerTest():
 
     input()
 
+'''
+def play():
+    done = false
+    while not done:
+        playAGame():
+		
+        do you want to play again?
+        if yes done = false, if no done = true
+		
+def playAGame():
+    initializeDisplay()
+	
+    done = false
+    player = player1
+    output player message ("X's turn" or "O's turn")
+    while not done:
+        player takes turn
+        is there a winner
+            if yes, done = true
+            output winner message
+        can play continue
+            if no, done = true
+            output draw message
+        player = next player
+        output player message 	
+'''
+
 if __name__ == "__main__":
     ControllerTest()
