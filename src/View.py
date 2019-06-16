@@ -18,7 +18,13 @@ class View:
         # Vertical
         Line(Point(1, 0), Point(1, 3)).draw(self.win)
         Line(Point(2, 0), Point(2, 3)).draw(self.win)
-
+    
+        # Text box
+        self.topText = Text(Point(250,25),"Test")
+        self.topText.setStyle("bold")
+        self.topText.setSize(18)
+        self.topText.draw(self.win)
+    
     def getClick():
         pt = self.win.getMouse()
 
@@ -28,9 +34,12 @@ class View:
             cellNum = -1
         return cellNum
 
+    def startText(self, message):
+        self.topText.setText("")
+
 def ViewTest():
     v = View()
-
+    v.startText("test")
     input()
     
 if __name__ == "__main__":

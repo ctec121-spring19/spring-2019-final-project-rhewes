@@ -3,12 +3,13 @@
 # For TicTacToe
 
 import View
+v = View
 
 class Model:
 
     def __init__(self):
-        # delete and enter your code here
-        pass
+        self._view() = View
+        
 
 def ModelTest():
     # delete and enter your code here
