@@ -2,18 +2,54 @@
 #
 # For TicTacToe
 
-import View
-import Model
+from View import View
+from Model import Model
 
 class Controller:
 
     def __init__(self):
-        # delete and enter your code here
-        pass
+        self.view = View()
+        self.model = Model(self.view)
+        self.player = ""
+
+    def play(self):
+        while True:
+            self.playAGame()
+
+            # ask if user wants to play another game
+            # if no, break
+
+    def playAGame(self):
+        self.view.reset()
+        self.player = "X"
+        # update message in View to say it's X's turn
+        self.view.startText("X\'s turn0")
+        
+        while True:
+            # get click/cellNum
+            # loop until have vaild cellNum
+                # valid: 0 >= cellNum <= 8 AND v.model.isEmpty(cellNum) returns True 
+            # provide message if click was not in valid cell
+            # self.model.turn(cellNum, self.player) - model updates data and tells you to draw player
+            # answer = self.model.isDone() - return "X" or "O" or "Draw" or "Continue"
+            # if answer is "X" or "O"
+                # self.view.startText("winner is" answer)
+                # break
+            # if answer is "draw"
+                # self.view.startText("Game was a draw")
+                # break
+            
+            # switches to other player
+            # if self.player == "X":
+                # self.player = "O"
+            # else:
+                # self.player = "X"
+            # self.view.startText(self.player + "\s turn") 
 
 def ControllerTest():
-    # delete and enter your code here
-    pass
+    c = Controller()
+
+    input()
 
 if __name__ == "__main__":
     ControllerTest()
