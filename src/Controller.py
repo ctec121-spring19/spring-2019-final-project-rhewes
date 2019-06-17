@@ -27,6 +27,7 @@ class Controller:
         
         while True:
             # get click/cellNum
+            self.view.getClick(cellNum)
             # loop until have vaild cellNum
                 # valid: 0 >= cellNum <= 8 AND v.model.isEmpty(cellNum) returns True 
             # provide message if click was not in valid cell
@@ -40,11 +41,11 @@ class Controller:
                 # break
             
             # switches to other player
-            # if self.player == "X":
-                # self.player = "O"
-            # else:
-                # self.player = "X"
-            # self.view.startText(self.player + "\s turn") 
+            if self.player == "X":
+                self.player = "O"
+            else:
+                self.player = "X"
+            self.view.startText(self.player + "\s turn") 
             pass
 
 
