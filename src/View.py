@@ -47,17 +47,16 @@ class View:
     
     
     def drawX(self,cellNum):
-        # draw 2 diagonal lines
-        # add both lines to objList
         y = cellNum // 3
         x = cellNum % 3
         center = Point(x + 0.5, y + 0.5)
-        x1 = Line((0.5, 1.5),1)
-        x2 = Line((0.5, 1.5),1)
+        x1 = Line( Point(0.25, 1.75), Point(0.75, 1.75) )
+        # x2 = Line((0.5, 1.5),1)
         x1.draw(self.win)
-        x2.draw(self.win)
+        # x2.draw(self.win)
         self.objList.append(x1)
-        self.objList.append(x2)
+        # self.objList.append(x2)
+        
         
 
     def reset(self):
@@ -78,7 +77,7 @@ def ViewTest():
     
     # test draw O
     for i in range(9):
-        # v.drawO(i)
+        v.drawO(i)
         v.drawX(i)
 
     input()
