@@ -45,11 +45,13 @@ class Controller:
             # else:
                 # self.player = "X"
             # self.view.startText(self.player + "\s turn") 
+            pass
 
-def ControllerTest():
-    c = Controller()
 
-    input()
+    def ControllerTest():
+        c = Controller()
+
+        input()
 
 '''
 def play():
