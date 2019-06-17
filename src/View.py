@@ -28,26 +28,37 @@ class View:
     
     def getClick(self):
         pt = self.win.getMouse()
-        
+
         if pt.getX() <= 3 and pt.getY() <= 3:
             cellNum = int(pt.getY()) * 3 + int(pt.getX())
         else:
             cellNum = -1
         return cellNum
-
+    
     # Calculate coordinates from cellNum
+    
     def drawO(self, cellNum):
         y = cellNum // 3
         x = cellNum % 3
         center = Point(x + 0.5, y + 0.5)
-        c = Circle(center, .45)
+        c = Circle(center, .3)
         c.draw(self.win)
         self.objList.append(c)
-
+    
+    
     def drawX(self,cellNum):
         # draw 2 diagonal lines
         # add both lines to objList
-        pass
+        y = cellNum // 3
+        x = cellNum % 3
+        center = Point(x + 0.5, y + 0.5)
+        x1 = Line((0.5, 1.5),1)
+        x2 = Line((0.5, 1.5),1)
+        x1.draw(self.win)
+        x2.draw(self.win)
+        self.objList.append(x1)
+        self.objList.append(x2)
+        
 
     def reset(self):
         for obj in self.objList:
@@ -64,9 +75,11 @@ def ViewTest():
     v.startText("Test")
     # test getClick
     # print(v.getClick())
+    
     # test draw O
     for i in range(9):
-        v.drawO(i)
+        # v.drawO(i)
+        v.drawX(i)
 
     input()
     v.reset()
